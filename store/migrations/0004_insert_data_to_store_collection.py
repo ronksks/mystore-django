@@ -4,7 +4,6 @@ from django.db import migrations
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
         ('store', '0003_customer_zip'),
     ]
@@ -13,7 +12,7 @@ class Migration(migrations.Migration):
         migrations.RunSQL('''
         INSERT INTO store_collection(title)
         VALUES ('collection1')
-        ''','''
+        ''', '''
         DELETE FROM store_collection
         WHERE title='collection1'
         ''')
